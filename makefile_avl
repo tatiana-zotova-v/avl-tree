@@ -1,0 +1,11 @@
+avl: avl_func.c avl_interface.c avl_main.c 
+	gcc avl_func.c avl_interface.c avl_main.c -o avl
+
+avl_func.o: avl_func.c tree.h
+	gcc -c avl_func.c -o avl_func.o
+
+avl_interface.o: avl_interface.c tree.h
+	gcc -c avl_interface.c -o avl_interface.o
+
+avl_main.o: avl_main.c tree.h
+	gcc -c avl_main.c -o avl_main.o
